@@ -340,17 +340,16 @@
                 return response.json();
             })
             .then(data => {
-                alert('¡Formulario enviado con éxito! Nos pondremos en contacto contigo pronto.');
+                // Por ahora solo mostraremos una alerta
+                alert('¡Gracias por tu interés! Nos pondremos en contacto contigo en un plazo máximo de 24 horas para ofrecerte una asesoría personalizada.');
+                
+                // Resetear el formulario
+                this.reset();
             })
             .catch(error => {
                 console.error('Error:', error);
                 alert('Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
             });
-            // Por ahora solo mostraremos una alerta
-            alert('¡Gracias por tu interés! Nos pondremos en contacto contigo en un plazo máximo de 24 horas para ofrecerte una asesoría personalizada.');
-            
-            // Resetear el formulario
-            this.reset();
         });
         
         // Scroll suave para enlaces internos
